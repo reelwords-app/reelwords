@@ -8,13 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0A0A0A;--bg2:#111111;--bg3:#1A1A1A;
-  --border:#2A2A2A;--border2:#333;
-  --text:#F0EDE6;--muted:#888;
-  --accent:#E8D5A3;--accent2:#C4A96B;
-  --green:#4ADE80;--green-bg:#0D2A1A;
-}
+:root{--bg:#0A0A0A;--bg2:#111111;--bg3:#1A1A1A;--border:#2A2A2A;--border2:#333;--text:#F0EDE6;--muted:#888;--accent:#E8D5A3;--accent2:#C4A96B;--green:#4ADE80;--green-bg:#0D2A1A;}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
 nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 3rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);z-index:100}
 .logo{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--accent);letter-spacing:-0.02em}
@@ -25,14 +19,13 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1.25re
 .badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-bg);border:1px solid #1a4d2a;color:var(--green);font-size:0.75rem;font-weight:500;padding:0.35rem 0.875rem;border-radius:100px;margin-bottom:2rem;letter-spacing:0.04em}
 .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-h1{font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.08;letter-spacing:-0.03em;margin-bottom:1.5rem;color:var(--text)}
+h1{font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.08;letter-spacing:-0.03em;margin-bottom:1.5rem}
 h1 em{font-style:italic;color:var(--accent)}
 .subtitle{font-size:1.125rem;color:var(--muted);line-height:1.7;max-width:520px;margin:0 auto 2.5rem}
 .input-wrap{background:var(--bg2);border:1px solid var(--border2);border-radius:12px;padding:0.5rem;display:flex;gap:0.5rem;max-width:600px;margin:0 auto 1rem}
 .url-input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9375rem;padding:0.625rem 0.875rem}
 .url-input::placeholder{color:#555}
-.generate-btn{background:var(--accent);color:#0A0A0A;border:none;padding:0.625rem 1.5rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.9375rem;cursor:pointer;transition:all 0.2s;white-space:nowrap}
-.generate-btn:hover{background:var(--accent2)}
+.generate-btn{background:var(--accent);color:#0A0A0A;border:none;padding:0.625rem 1.5rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.9375rem;cursor:pointer;white-space:nowrap}
 .generate-btn:disabled{opacity:0.5;cursor:not-allowed}
 .hint{font-size:0.8125rem;color:#555;text-align:center}
 .social-proof{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:2rem;flex-wrap:wrap}
@@ -41,25 +34,20 @@ h1 em{font-style:italic;color:var(--accent)}
 .divider{width:1px;height:14px;background:var(--border2)}
 .output-area{max-width:900px;margin:0 auto;padding:0 3rem 4rem;display:none}
 .output-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
-.output-title{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--text)}
+.output-title{font-family:'Instrument Serif',serif;font-size:1.5rem}
 .video-info{display:flex;align-items:center;gap:10px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.625rem 1rem;font-size:0.875rem;color:var(--muted);max-width:360px}
-.video-thumb{width:48px;height:32px;background:var(--bg3);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:#555}
 .cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 @media(max-width:600px){.cards-grid{grid-template-columns:1fr}}
 .content-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .card-header{display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1rem;border-bottom:1px solid var(--border)}
-.card-platform{display:flex;align-items:center;gap:8px;font-size:0.8125rem;font-weight:600;color:var(--text)}
-.platform-icon{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0}
-.card-copy-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);font-size:0.75rem;padding:0.25rem 0.625rem;border-radius:5px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.15s}
-.card-copy-btn:hover{border-color:var(--accent2);color:var(--accent)}
+.card-platform{display:flex;align-items:center;gap:8px;font-size:0.8125rem;font-weight:600}
+.platform-icon{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0}
+.card-copy-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);font-size:0.75rem;padding:0.25rem 0.625rem;border-radius:5px;cursor:pointer;font-family:'DM Sans',sans-serif}
 .card-body{padding:1rem;font-size:0.875rem;line-height:1.7;color:#B8B4AB;min-height:120px;max-height:240px;overflow-y:auto;white-space:pre-wrap}
-.card-body::-webkit-scrollbar{width:4px}
-.card-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 .loading-card{animation:shimmer 1.5s ease-in-out infinite}
 @keyframes shimmer{0%,100%{opacity:0.4}50%{opacity:0.8}}
 .loading-line{height:11px;background:var(--bg3);border-radius:3px;margin-bottom:9px}
-.loading-line.short{width:55%}
-.loading-line.med{width:80%}
+.loading-line.short{width:55%}.loading-line.med{width:80%}
 .upsell{background:#1A1408;border:1px solid #2A2A18;border-radius:12px;padding:2rem;text-align:center;margin-top:1.5rem}
 .upsell-title{font-family:'Instrument Serif',serif;font-size:1.375rem;margin-bottom:0.5rem}
 .upsell-sub{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem}
@@ -91,29 +79,23 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;align-i
 </style>
 </head>
 <body>
-
 <nav>
   <div class="logo">Reel<span>Words</span></div>
   <div style="display:flex;align-items:center;gap:1.5rem">
-    <span style="font-size:0.875rem;color:var(--muted);cursor:pointer" onclick="scrollToApp()">Try Free</span>
     <button class="nav-cta" onclick="scrollToApp()">Start Free →</button>
   </div>
 </nav>
-
 <div id="landing-section">
   <div class="hero">
     <div class="badge"><span class="badge-dot"></span>7-day free trial — no credit card needed</div>
     <h1>One video.<br><em>A week of content.</em></h1>
-    <p class="subtitle">Paste any YouTube link. Get posts for Instagram, Twitter, LinkedIn, and more — ready in 60 seconds. Powered by AI trained on viral content.</p>
-
-    <div class="error-msg" id="error-msg">⚠️ Please enter a valid YouTube URL to continue.</div>
-
+    <p class="subtitle">Paste any YouTube link. Get posts for Instagram, Twitter, LinkedIn, and more — ready in 60 seconds.</p>
+    <div class="error-msg" id="error-msg">⚠️ Please enter a valid YouTube URL.</div>
     <div class="input-wrap">
-      <input class="url-input" id="yt-url" type="text" placeholder="Paste a YouTube URL here… e.g. https://youtube.com/watch?v=..." />
+      <input class="url-input" id="yt-url" type="text" placeholder="Paste a YouTube URL here…" />
       <button class="generate-btn" id="gen-btn" onclick="handleGenerate()">Generate Free →</button>
     </div>
     <p class="hint">No account needed for your first 3 videos · Takes ~60 seconds</p>
-
     <div class="social-proof">
       <div class="sp-item"><span class="sp-num">4,200+</span> creators using ReelWords</div>
       <div class="divider"></div>
@@ -122,7 +104,6 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;align-i
       <div class="sp-item"><span class="sp-num">6 formats</span> at once</div>
     </div>
   </div>
-
   <div class="platforms">
     <div class="platform-tag">📸 Instagram</div>
     <div class="platform-tag">𝕏 Twitter / X</div>
@@ -131,248 +112,88 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;align-i
     <div class="platform-tag">▶️ YouTube Description</div>
     <div class="platform-tag">💡 Content Ideas</div>
   </div>
-
   <div class="how">
     <div class="section-label">How it works</div>
     <div class="section-title">Three steps to done.</div>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">STEP 01</div>
-        <div class="step-title">Paste your video link</div>
-        <div class="step-desc">Any public YouTube video. We extract the full transcript automatically — no uploading needed.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">STEP 02</div>
-        <div class="step-title">AI writes your content</div>
-        <div class="step-desc">Our model understands what makes content viral on each platform. It writes differently for Instagram vs LinkedIn.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">STEP 03</div>
-        <div class="step-title">Copy, paste, publish</div>
-        <div class="step-desc">Everything is formatted and ready. Click copy on any card and paste directly into your platform of choice.</div>
-      </div>
+      <div class="step"><div class="step-num">STEP 01</div><div class="step-title">Paste your video link</div><div class="step-desc">Any public YouTube video. We extract the transcript automatically.</div></div>
+      <div class="step"><div class="step-num">STEP 02</div><div class="step-title">AI writes your content</div><div class="step-desc">Our AI writes differently for each platform — Instagram, LinkedIn, Twitter.</div></div>
+      <div class="step"><div class="step-num">STEP 03</div><div class="step-title">Copy, paste, publish</div><div class="step-desc">Everything ready to copy-paste directly into your platform of choice.</div></div>
     </div>
   </div>
 </div>
-
 <div class="output-area" id="output-area">
-  <div class="trial-banner" id="trial-banner">
-    ✓ Free trial active — <strong style="margin:0 4px">2 videos remaining</strong> before your trial ends. No card needed yet.
-  </div>
-
+  <div class="trial-banner" id="trial-banner">✓ Free trial active — <strong style="margin:0 4px">2 videos remaining</strong></div>
   <div class="output-header">
     <div class="output-title">Your content is ready ✨</div>
-    <div class="video-info">
-      <div class="video-thumb">▶</div>
-      <span id="video-title-display" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:260px">Processing…</span>
-    </div>
+    <div class="video-info"><span>▶</span><span id="video-title-display">Processing…</span></div>
   </div>
-
   <div class="cards-grid" id="cards-grid"></div>
-
   <div style="text-align:center;margin-top:1.5rem">
     <button class="generate-btn" onclick="resetApp()" style="background:transparent;border:1px solid var(--border2);color:var(--muted);font-size:0.875rem;padding:0.5rem 1.25rem">← Try another video</button>
   </div>
-
   <div class="upsell" id="upsell-block" style="display:none">
     <div class="upsell-title">You've used your 3 free videos 🎉</div>
-    <div class="upsell-sub">Upgrade to keep going. Pick the plan that fits your workflow.</div>
+    <div class="upsell-sub">Upgrade to keep going.</div>
     <div class="pricing-row">
-      <div class="price-card">
-        <div class="plan-name">Creator</div>
-        <div class="plan-price">$19<span>/mo</span></div>
-        <div class="plan-limit">30 videos / month</div>
-        <button class="plan-btn outline" onclick="goToCheckout('creator')">Get Started</button>
-      </div>
-      <div class="price-card featured">
-        <div class="plan-name">Pro ⭐ Most Popular</div>
-        <div class="plan-price">$39<span>/mo</span></div>
-        <div class="plan-limit">Unlimited videos</div>
-        <button class="plan-btn" onclick="goToCheckout('pro')">Start Free Trial</button>
-      </div>
+      <div class="price-card"><div class="plan-name">Creator</div><div class="plan-price">$19<span>/mo</span></div><div class="plan-limit">30 videos/month</div><button class="plan-btn outline">Get Started</button></div>
+      <div class="price-card featured"><div class="plan-name">Pro ⭐</div><div class="plan-price">$39<span>/mo</span></div><div class="plan-limit">Unlimited videos</div><button class="plan-btn">Start Free Trial</button></div>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-logo">ReelWords</div>
   <div class="footer-copy">© 2025 ReelWords · All rights reserved</div>
 </footer>
-
 <script>
-const ANTHROPIC_API = "https://api.anthropic.com/v1/messages";
-const API_KEY = "sk-ant-api03-OReFGpod9Kypsn44qC8rC2E_sZrDUSB1PZxdO6mYD-3CE_Lts15ezOEu1f2CBS7iIPdajoXgYYB2AHWDKcxnHg-ibxTNAAA";
-let usageCount = parseInt(localStorage.getItem('rw_usage') || '0');
-
-const platforms = [
-  {id:'instagram',label:'Instagram Caption',icon:'📸',color:'#E1306C',bg:'#2D0A14',
-   prompt:'Write an engaging Instagram caption for this video. Include a strong hook in the first line, storytelling in the middle, a clear CTA at the end, and 8-10 relevant hashtags. Make it feel personal and authentic.'},
-  {id:'twitter',label:'Twitter / X Thread',icon:'𝕏',color:'#aaa',bg:'#111',
-   prompt:'Write a viral Twitter/X thread about this video. Start with a powerful hook tweet (1/), then 5-6 insight tweets, end with a summary tweet. Number each tweet. Each tweet must be under 280 chars and stand alone.'},
-  {id:'linkedin',label:'LinkedIn Post',icon:'💼',color:'#0077B5',bg:'#031929',
-   prompt:'Write a professional LinkedIn post about this video. Start with a bold insight or question, share 3-4 key takeaways, end with a thought-provoking question to drive comments. No hashtag spam. Professional but human tone.'},
-  {id:'newsletter',label:'Email Newsletter',icon:'📧',color:'#E8D5A3',bg:'#1A1408',
-   prompt:'Write an email newsletter section based on this video. Include: subject line suggestion, preview text, intro paragraph, 3 key insights as short paragraphs, and a CTA to watch the full video. Conversational and valuable tone.'},
-  {id:'youtube',label:'YouTube Description',icon:'▶️',color:'#FF0000',bg:'#1A0000',
-   prompt:'Write an SEO-optimized YouTube video description. Include: compelling first 2 lines (shown before "more"), timestamps placeholder section, key topics covered, relevant keywords naturally woven in, links section placeholder, and a subscribe CTA.'},
-  {id:'ideas',label:'Content Ideas',icon:'💡',color:'#F59E0B',bg:'#1A1200',
-   prompt:'Generate 8 creative content ideas inspired by this video. For each idea include: a catchy title, the platform it works best for, and one sentence on the angle/hook. Make them diverse — some educational, some controversial, some personal story angles.'}
+let usageCount = parseInt(localStorage.getItem('rw_usage')||'0');
+const platforms=[
+  {id:'instagram',label:'Instagram Caption',icon:'📸',color:'#E1306C',bg:'#2D0A14',prompt:'Write an engaging Instagram caption. Strong hook first line, storytelling, CTA, 8 hashtags.'},
+  {id:'twitter',label:'Twitter / X Thread',icon:'𝕏',color:'#aaa',bg:'#111',prompt:'Write a viral Twitter thread, 6 tweets numbered 1/ to 6/, each under 280 chars.'},
+  {id:'linkedin',label:'LinkedIn Post',icon:'💼',color:'#0077B5',bg:'#031929',prompt:'Write a professional LinkedIn post. Bold insight, 3 takeaways, end with a question.'},
+  {id:'newsletter',label:'Email Newsletter',icon:'📧',color:'#E8D5A3',bg:'#1A1408',prompt:'Write an email newsletter. Subject line, intro, 3 key insights, CTA.'},
+  {id:'youtube',label:'YouTube Description',icon:'▶️',color:'#FF0000',bg:'#1A0000',prompt:'Write an SEO-optimized YouTube description with keywords, timestamps placeholder, subscribe CTA.'},
+  {id:'ideas',label:'Content Ideas',icon:'💡',color:'#F59E0B',bg:'#1A1200',prompt:'Generate 8 content ideas from this video. Title, platform, hook for each.'}
 ];
-
-function scrollToApp(){
-  document.getElementById('yt-url').focus();
-  document.getElementById('yt-url').scrollIntoView({behavior:'smooth',block:'center'});
+function scrollToApp(){document.getElementById('yt-url').focus();document.getElementById('yt-url').scrollIntoView({behavior:'smooth',block:'center'});}
+function resetApp(){document.getElementById('output-area').style.display='none';document.getElementById('landing-section').style.display='block';document.getElementById('yt-url').value='';window.scrollTo({top:0,behavior:'smooth'});}
+function isValidYT(url){return /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/.test(url);}
+function createLoadingCard(p){return `<div class="content-card" id="card-${p.id}"><div class="card-header"><div class="card-platform"><div class="platform-icon" style="background:${p.bg};color:${p.color}">${p.icon}</div>${p.label}</div><button class="card-copy-btn" disabled>Copy</button></div><div class="card-body loading-card"><div class="loading-line"></div><div class="loading-line med"></div><div class="loading-line short"></div><div class="loading-line"></div><div class="loading-line med"></div></div></div>`;}
+function updateCard(p,content){const el=document.getElementById('card-'+p.id);if(!el)return;el.innerHTML=`<div class="card-header"><div class="card-platform"><div class="platform-icon" style="background:${p.bg};color:${p.color}">${p.icon}</div>${p.label}</div><button class="card-copy-btn" onclick="copyCard('card-${p.id}')">Copy</button></div><div class="card-body">${esc(content)}</div>`;}
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function copyCard(id){const b=document.querySelector('#'+id+' .card-body');if(!b)return;navigator.clipboard.writeText(b.innerText).then(()=>{const btn=document.querySelector('#'+id+' .card-copy-btn');btn.textContent='✓ Copied!';btn.style.color='#4ADE80';setTimeout(()=>{btn.textContent='Copy';btn.style.color='';},2000);});}
+async function generateForPlatform(p,url){
+  try{
+    const res=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+      system:'You are an expert content repurposing specialist. Write platform-optimized content that feels authentic. English only. Output only the content, no explanations.',
+      prompt:`YouTube video URL: ${url}\n\nTask: ${p.prompt}\nWrite as if you watched the full video. Be specific and engaging.`
+    })});
+    const data=await res.json();
+    if(data.error)return'Error: '+data.error.message;
+    return data.content?.map(c=>c.text||'').join('')||'Could not generate.';
+  }catch(e){return'Network error. Please try again.';}
 }
-
-function resetApp(){
-  document.getElementById('output-area').style.display='none';
-  document.getElementById('landing-section').style.display='block';
-  document.getElementById('yt-url').value='';
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function goToCheckout(plan){
-  alert('Checkout coming soon! Plan: ' + plan);
-}
-
-function isValidYouTubeUrl(url){
-  return /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/.test(url);
-}
-
-function extractVideoId(url){
-  const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/);
-  return m ? m[1] : null;
-}
-
-function createLoadingCard(p){
-  return `<div class="content-card" id="card-${p.id}">
-    <div class="card-header">
-      <div class="card-platform">
-        <div class="platform-icon" style="background:${p.bg};color:${p.color}">${p.icon}</div>
-        ${p.label}
-      </div>
-      <button class="card-copy-btn" disabled>Copy</button>
-    </div>
-    <div class="card-body loading-card">
-      <div class="loading-line"></div>
-      <div class="loading-line med"></div>
-      <div class="loading-line short"></div>
-      <div class="loading-line"></div>
-      <div class="loading-line med"></div>
-      <div class="loading-line short"></div>
-    </div>
-  </div>`;
-}
-
-function updateCard(p, content){
-  const el = document.getElementById('card-'+p.id);
-  if(!el) return;
-  el.innerHTML = `
-    <div class="card-header">
-      <div class="card-platform">
-        <div class="platform-icon" style="background:${p.bg};color:${p.color}">${p.icon}</div>
-        ${p.label}
-      </div>
-      <button class="card-copy-btn" onclick="copyCard('card-${p.id}')">Copy</button>
-    </div>
-    <div class="card-body">${escHtml(content)}</div>`;
-}
-
-function escHtml(t){
-  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-function copyCard(cardId){
-  const body = document.querySelector('#'+cardId+' .card-body');
-  if(!body) return;
-  navigator.clipboard.writeText(body.innerText).then(()=>{
-    const btn = document.querySelector('#'+cardId+' .card-copy-btn');
-    const orig = btn.textContent;
-    btn.textContent = '✓ Copied!';
-    btn.style.color = 'var(--green)';
-    setTimeout(()=>{ btn.textContent=orig; btn.style.color=''; }, 2000);
-  });
-}
-
-async function generateForPlatform(p, videoUrl, videoId){
-  try {
-    const context = videoId
-      ? `YouTube video URL: ${videoUrl}\nVideo ID: ${videoId}\nNote: Analyze the video topic from the URL and create compelling content as if you've watched the full video. Be specific and insightful.`
-      : `YouTube video URL: ${videoUrl}`;
-
-    const res = await fetch(ANTHROPIC_API, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        system:`You are an expert content repurposing specialist and viral content creator. You create platform-optimized content that feels authentic, not AI-generated. You understand the nuances of each social platform deeply. Always write in English. Output only the content itself — no explanations, no meta-commentary.`,
-        messages:[{role:'user',content:`${context}\n\nTask: ${p.prompt}`}]
-      })
-    });
-    const data = await res.json();
-    if(data.error) return `Error: ${data.error.message}`;
-    return data.content?.map(c=>c.text||'').join('') || 'Could not generate content.';
-  } catch(e) {
-    return 'Network error. Please try again.';
-  }
-}
-
 async function handleGenerate(){
-  const url = document.getElementById('yt-url').value.trim();
-  const errEl = document.getElementById('error-msg');
-
-  if(!url || !isValidYouTubeUrl(url)){
-    errEl.style.display='block';
-    return;
-  }
-  errEl.style.display='none';
-
-  usageCount++;
-  localStorage.setItem('rw_usage', usageCount);
-
-  const btn = document.getElementById('gen-btn');
-  btn.disabled=true;
-  btn.textContent='Generating…';
-
+  const url=document.getElementById('yt-url').value.trim();
+  const err=document.getElementById('error-msg');
+  if(!url||!isValidYT(url)){err.style.display='block';return;}
+  err.style.display='none';
+  usageCount++;localStorage.setItem('rw_usage',usageCount);
+  const btn=document.getElementById('gen-btn');
+  btn.disabled=true;btn.textContent='Generating…';
   document.getElementById('landing-section').style.display='none';
-  const out = document.getElementById('output-area');
-  out.style.display='block';
-  out.scrollIntoView({behavior:'smooth'});
-
-  const videoId = extractVideoId(url);
-  document.getElementById('video-title-display').textContent = url.length > 50 ? url.slice(0,50)+'…' : url;
-
-  const banner = document.getElementById('trial-banner');
-  const remaining = Math.max(0, 3 - usageCount);
-  if(remaining > 0){
-    banner.innerHTML = `✓ Free trial active — <strong style="margin:0 4px">${remaining} video${remaining!==1?'s':''} remaining</strong> before your trial ends.`;
-    banner.style.display='flex';
-  } else {
-    banner.innerHTML = `⚡ <strong>Trial limit reached</strong> — upgrade below to keep generating content.`;
-    banner.style.background='#1A0D00';
-    banner.style.borderColor='#4d2a00';
-    banner.style.color='#fb923c';
-  }
-
-  document.getElementById('cards-grid').innerHTML = platforms.map(createLoadingCard).join('');
-
-  await Promise.all(platforms.map(async p => {
-    const content = await generateForPlatform(p, url, videoId);
-    updateCard(p, content);
-  }));
-
-  if(usageCount >= 3){
-    document.getElementById('upsell-block').style.display='block';
-  }
-
-  btn.disabled=false;
-  btn.textContent='Generate Free →';
+  const out=document.getElementById('output-area');
+  out.style.display='block';out.scrollIntoView({behavior:'smooth'});
+  document.getElementById('video-title-display').textContent=url.length>50?url.slice(0,50)+'…':url;
+  const banner=document.getElementById('trial-banner');
+  const rem=Math.max(0,3-usageCount);
+  banner.innerHTML=rem>0?`✓ Free trial active — <strong style="margin:0 4px">${rem} video${rem!==1?'s':''} remaining</strong>`:`⚡ <strong>Trial limit reached</strong> — upgrade below.`;
+  document.getElementById('cards-grid').innerHTML=platforms.map(createLoadingCard).join('');
+  await Promise.all(platforms.map(async p=>{const c=await generateForPlatform(p,url);updateCard(p,c);}));
+  if(usageCount>=3)document.getElementById('upsell-block').style.display='block';
+  btn.disabled=false;btn.textContent='Generate Free →';
 }
-
-document.getElementById('yt-url').addEventListener('keydown', e => {
-  if(e.key==='Enter') handleGenerate();
-});
+document.getElementById('yt-url').addEventListener('keydown',e=>{if(e.key==='Enter')handleGenerate();});
 </script>
 </body>
 </html>
