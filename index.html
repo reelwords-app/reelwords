@@ -148,7 +148,7 @@ footer{border-top:1px solid var(--border);padding:2rem 3rem;display:flex;align-i
 <script>
 let usageCount = parseInt(localStorage.getItem('rw_usage')||'0');
 const platforms=[
-  {id:'instagram',label:'Instagram Caption',icon:'📸',color:'#E1306C',bg:'#2D0A14',prompt:'Write an engaging Instagram caption. Strong hook first line, storytelling, CTA, 8 hashtags.'},
+  {id:'instagram',label:'Instagram Caption',icon:'📸',color:'#E1306C',bg:'#2D0A14',prompt:'Write an engaging Instagram caption based on the topic of this YouTube video. IMPORTANT: Do NOT say you cannot access the video. Instead, infer the topic from the URL and create compelling content. Strong hook in first line, emotional storytelling, clear CTA, 8-10 relevant hashtags. Write it as if you watched the full video.'},
   {id:'twitter',label:'Twitter / X Thread',icon:'𝕏',color:'#aaa',bg:'#111',prompt:'Write a viral Twitter thread, 6 tweets numbered 1/ to 6/, each under 280 chars.'},
   {id:'linkedin',label:'LinkedIn Post',icon:'💼',color:'#0077B5',bg:'#031929',prompt:'Write a professional LinkedIn post. Bold insight, 3 takeaways, end with a question.'},
   {id:'newsletter',label:'Email Newsletter',icon:'📧',color:'#E8D5A3',bg:'#1A1408',prompt:'Write an email newsletter. Subject line, intro, 3 key insights, CTA.'},
